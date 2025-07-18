@@ -7,28 +7,34 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
-<div class="wrapper">
-    <p class="game-info"></p>
+ <div class="wrapper">
+        <p class="game-info"></p>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="player">Player vs Player</button>
+            <button class="mode-btn" data-mode="computer">Player vs Computer</button>
+        </div>
 
-    <div class="tic-tac-toe">
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
 
-        <div class="box box1"></div>
-        <div class="box box2"></div>
-        <div class="box box3"></div>
-        <div class="box box4"></div>
-        <div class="box box5"></div>
-        <div class="box box6"></div>
-        <div class="box box7"></div>
-        <div class="box box8"></div>
-        <div class="box box9"></div>
-
+        <div class="tic-tac-toe">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+            <div class="box box7"></div>
+            <div class="box box8"></div>
+            <div class="box box9"></div>
+        </div>
+        
+        <button class="btn">New Game</button>
     </div>
-    
-<button class="btn">New Game</button>
-
-
-</div>
 
     <script src="index.js"></script>
 </body>

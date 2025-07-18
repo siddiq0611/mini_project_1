@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', 'sans-sherif';
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .wrapper{
@@ -13,8 +13,12 @@
     background-position: center;
     display: grid;
     place-items: center;
+    transition: background-image 0.3s ease;
+}
 
-}   
+.wrapper.computer-mode {
+    background-image: url(computer-bg.jpg);
+}
 
 .game-info{
     color: white;
@@ -27,7 +31,70 @@
     border: 1px solid rgba(225,225,225,0.25);
     padding: 0.5rem 3rem;
     text-align: center;
+}
 
+.mode-selector {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mode-btn {
+    color: white;
+    background-color: rgba(225,225,225,0.15);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(225,225,225,0.25);
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background-color: rgba(225,225,225,0.3);
+    border-color: rgba(225,225,225,0.5);
+}
+
+.mode-btn:hover {
+    background-color: rgba(225,225,225,0.25);
+}
+
+.difficulty-selector {
+    position: absolute;
+    top: 9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    gap: 0.5rem;
+}
+
+.difficulty-selector.active {
+    display: flex;
+}
+
+.difficulty-btn {
+    color: white;
+    background-color: rgba(225,225,225,0.15);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(225,225,225,0.25);
+    padding: 0.2rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.difficulty-btn.active {
+    background-color: rgba(225,225,225,0.3);
+    border-color: rgba(225,225,225,0.5);
+}
+
+.difficulty-btn:hover {
+    background-color: rgba(225,225,225,0.25);
 }
 
 .tic-tac-toe{
@@ -86,5 +153,5 @@
 }
 
 .win{
-    background-color: rgb(28, 43, 57)
+    background-color: rgb(28, 43, 57);
 }
